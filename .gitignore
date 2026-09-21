@@ -1,0 +1,14 @@
+.godot/
+.env
+.env.*
+.codex/
+.agents/
+*.log
+*.exe
+*.pck
+*.zip
+tests/*.png
+tests/*.png.import
+tests/*.json
+*.tmp
+builds/

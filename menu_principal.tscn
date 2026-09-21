@@ -1,0 +1,204 @@
+[gd_scene load_steps=8 format=3 uid="uid://bpudmlgy2tg2f"]
+
+[ext_resource type="Script" uid="uid://wt7b4pk3x8r1" path="res://menu_principal.gd" id="1_bj1uy"]
+[ext_resource type="Texture2D" uid="uid://bu34brs7gji8l" path="res://fundos/Gemini_Generated_Image_5y4az05y4az05y4a.jpg" id="2_ns3he"]
+[ext_resource type="FontFile" uid="uid://brokdgok7wvkd" path="res://FONTES/KGTenThousandReasons.ttf" id="2_ul6ys"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_menu_normal"]
+content_margin_left = 18.0
+content_margin_top = 8.0
+content_margin_right = 18.0
+content_margin_bottom = 8.0
+bg_color = Color(0.0862745, 0.180392, 0.12549, 0.92)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.917647, 0.839216, 0.592157, 0.9)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+shadow_color = Color(0, 0, 0, 0.35)
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_menu_hover"]
+content_margin_left = 18.0
+content_margin_top = 8.0
+content_margin_right = 18.0
+content_margin_bottom = 8.0
+bg_color = Color(0.145098, 0.313726, 0.211765, 0.98)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 0.894118, 0.513726, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+shadow_color = Color(0, 0, 0, 0.45)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_menu_pressed"]
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 18.0
+content_margin_bottom = 6.0
+bg_color = Color(0.0588235, 0.12549, 0.0862745, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.854902, 0.737255, 0.384314, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_menu_focus"]
+bg_color = Color(0.145098, 0.313726, 0.211765, 0.98)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 0.894118, 0.513726, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[node name="Menu Principal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bj1uy")
+
+[node name="Fundo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ns3he")
+expand_mode = 1
+stretch_mode = 6
+mouse_filter = 2
+
+[node name="Sombra" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0156863, 0.054902, 0.0313726, 0.18)
+
+[node name="Conteudo" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -145.0
+offset_right = 220.0
+offset_bottom = 155.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Titulo" type="Label" parent="Conteudo"]
+custom_minimum_size = Vector2(440, 58)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.956863, 0.819608, 1)
+theme_override_colors/font_outline_color = Color(0.0352941, 0.105882, 0.0627451, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_ul6ys")
+theme_override_font_sizes/font_size = 36
+text = "SCHOOL CLICKER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Subtitulo" type="Label" parent="Conteudo"]
+custom_minimum_size = Vector2(440, 28)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.933333, 0.933333, 0.843137, 1)
+theme_override_colors/font_outline_color = Color(0.0352941, 0.105882, 0.0627451, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_ul6ys")
+theme_override_font_sizes/font_size = 17
+text = "Estude, evolua e domine as provas!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Espaco" type="Control" parent="Conteudo"]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="BOTAOjogar" type="Button" parent="Conteudo"]
+custom_minimum_size = Vector2(230, 46)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.956863, 0.819608, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.894118, 0.513726, 1)
+theme_override_fonts/font = ExtResource("2_ul6ys")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxFlat_menu_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_menu_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_menu_pressed")
+theme_override_styles/focus = SubResource("StyleBoxFlat_menu_focus")
+text = "JOGAR"
+
+[node name="BOTAOajuda" type="Button" parent="Conteudo"]
+custom_minimum_size = Vector2(230, 46)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.956863, 0.819608, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.894118, 0.513726, 1)
+theme_override_fonts/font = ExtResource("2_ul6ys")
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxFlat_menu_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_menu_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_menu_pressed")
+theme_override_styles/focus = SubResource("StyleBoxFlat_menu_focus")
+text = "COMO JOGAR"
+
+[node name="BOTAOsair" type="Button" parent="Conteudo"]
+custom_minimum_size = Vector2(230, 46)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.956863, 0.819608, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.894118, 0.513726, 1)
+theme_override_fonts/font = ExtResource("2_ul6ys")
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxFlat_menu_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_menu_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_menu_pressed")
+theme_override_styles/focus = SubResource("StyleBoxFlat_menu_focus")
+text = "SAIR"
+
+[node name="Transicao" type="ColorRect" parent="."]
+z_index = 100
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0196078, 0.0470588, 0.027451, 0)
+
+[connection signal="pressed" from="Conteudo/BOTAOsair" to="." method="_on_bota_osair_pressed"]
+[connection signal="pressed" from="Conteudo/BOTAOajuda" to="." method="_on_bota_oajuda_pressed"]
+[connection signal="pressed" from="Conteudo/BOTAOjogar" to="." method="_on_bota_ojogar_pressed"]

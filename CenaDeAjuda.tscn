@@ -1,0 +1,150 @@
+[gd_scene load_steps=7 format=3 uid="uid://cq1l6nc0m747b"]
+
+[ext_resource type="FontFile" uid="uid://cne2e1rffkgr" path="res://KGTenThousandReasons.ttf" id="1_isckh"]
+[ext_resource type="Script" uid="uid://kwhnfqg8i76x" path="res://cena_de_ajuda.gd" id="1_lf3n2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_painel"]
+bg_color = Color(0.945098, 0.913725, 0.819608, 0.97)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.0862745, 0.2, 0.129412, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+shadow_color = Color(0, 0, 0, 0.35)
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_botao"]
+bg_color = Color(0.0862745, 0.25098, 0.156863, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.74902, 0.631373, 0.298039, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_botao_hover"]
+bg_color = Color(0.145098, 0.364706, 0.235294, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.968627, 0.819608, 0.4, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_botao_pressed"]
+bg_color = Color(0.0470588, 0.152941, 0.0901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.74902, 0.631373, 0.298039, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lf3n2")
+
+[node name="Fundo" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0745098, 0.239216, 0.145098, 1)
+
+[node name="Margem" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 26.0
+offset_top = 20.0
+offset_right = -26.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Painel" type="PanelContainer" parent="Margem"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_painel")
+
+[node name="MargemInterna" type="MarginContainer" parent="Margem/Painel"]
+layout_mode = 2
+theme_override_constants/margin_left = 28
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 28
+theme_override_constants/margin_bottom = 16
+
+[node name="Conteudo" type="VBoxContainer" parent="Margem/Painel/MargemInterna"]
+layout_mode = 2
+theme_override_constants/separation = 9
+
+[node name="Titulo" type="Label" parent="Margem/Painel/MargemInterna/Conteudo"]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.054902, 0.176471, 0.105882, 1)
+theme_override_fonts/font = ExtResource("1_isckh")
+theme_override_font_sizes/font_size = 28
+text = "COMO JOGAR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Separador" type="HSeparator" parent="Margem/Painel/MargemInterna/Conteudo"]
+layout_mode = 2
+
+[node name="TextoAjuda" type="RichTextLabel" parent="Margem/Painel/MargemInterna/Conteudo"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.0705882, 0.101961, 0.0784314, 1)
+theme_override_fonts/normal_font = ExtResource("1_isckh")
+theme_override_fonts/bold_font = ExtResource("1_isckh")
+theme_override_font_sizes/normal_font_size = 15
+theme_override_font_sizes/bold_font_size = 18
+bbcode_enabled = true
+text = "[b]1. ESTUDE[/b] — Clique no caderno para ganhar QI.\n\n[b]2. MELHORE[/b] — Use a loja para aumentar o clique e produzir QI automaticamente.\n\n[b]3. FAÇA AS PROVAS[/b] — Pague o custo do seminário, responda 5 perguntas e cuide das suas 3 vidas.\n\n[b]4. AVANCE[/b] — Passe na Prova 1 para liberar a Prova 2. Seu QI, upgrades, volume e provas concluídas são salvos automaticamente."
+fit_content = true
+scroll_active = false
+
+[node name="BotaoVoltar" type="Button" parent="Margem/Painel/MargemInterna/Conteudo"]
+custom_minimum_size = Vector2(160, 42)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.956863, 0.819608, 1)
+theme_override_fonts/font = ExtResource("1_isckh")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_botao")
+theme_override_styles/hover = SubResource("StyleBoxFlat_botao_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_botao_pressed")
+theme_override_styles/focus = SubResource("StyleBoxFlat_botao_hover")
+text = "VOLTAR"
+
+[node name="Transicao" type="ColorRect" parent="."]
+z_index = 100
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0196078, 0.0470588, 0.027451, 0)

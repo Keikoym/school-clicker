@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://clnikenp56f66"
+path="res://.godot/imported/TCT - OST 4.mp3-ccf3fa2df7a439187639bf0eae109c9b.mp3str"
+
+[deps]
+
+source_file="res://TCT - OST 4.mp3"
+dest_files=["res://.godot/imported/TCT - OST 4.mp3-ccf3fa2df7a439187639bf0eae109c9b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

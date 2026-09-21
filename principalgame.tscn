@@ -1,0 +1,772 @@
+[gd_scene format=3 uid="uid://dee4p0jie84yj"]
+
+[ext_resource type="Texture2D" path="res://assets/backgrounds/mesa_primeira_pessoa.png" id="1_wg4x1"]
+[ext_resource type="Script" uid="uid://bq6hl3055wdjx" path="res://main.gd" id="2_0hol4"]
+[ext_resource type="Texture2D" uid="uid://xmqrmykujcoa" path="res://17_Sem_Titulo_20260517184439.png" id="3_1fr6y"]
+[ext_resource type="Texture2D" uid="uid://blqq3td70x646" path="res://469_Sem_Titulo_20260517174641.png" id="3_kdubu"]
+[ext_resource type="Texture2D" path="res://assets/itens/marca_texto.png" id="3_rjqkl"]
+[ext_resource type="Texture2D" uid="uid://debhf5nvggxfu" path="res://17_Sem_Titulo_20260517184700.png" id="4_2hxjc"]
+[ext_resource type="Texture2D" path="res://assets/itens/corretivo.png" id="4_fs4d3"]
+[ext_resource type="Texture2D" uid="uid://duop0kh22wqxp" path="res://16_Sem_Titulo_20260516224858.png" id="4_kdubu"]
+[ext_resource type="Texture2D" uid="uid://bseaovpvrp3vx" path="res://16_Sem_Titulo_20260516225228.png" id="5_d21ai"]
+[ext_resource type="Texture2D" uid="uid://cpvr50rjxeks6" path="res://17_Sem_Titulo_20260517185340.png" id="5_ebxd8"]
+[ext_resource type="Texture2D" uid="uid://bo0i7iap26tg8" path="res://17_Sem_Titulo_20260517185400.png" id="6_2u7jv"]
+[ext_resource type="Texture2D" path="res://assets/itens/estojo_completo.png" id="6_d21ai"]
+[ext_resource type="Script" uid="uid://d34hn1pui01ed" path="res://botao_upgrade_clique.gd" id="6_rj586"]
+[ext_resource type="Texture2D" uid="uid://ch76m0fd2kufn" path="res://473_Sem_Titulo_20260517201857.png" id="6_x0ka3"]
+[ext_resource type="Script" uid="uid://dq6neet3isihg" path="res://botao_gerador_qi.gd" id="7_4d7sh"]
+[ext_resource type="Texture2D" uid="uid://xgca5v1g183y" path="res://17_Sem_Titulo_20260517190310.png" id="7_24dk6"]
+[ext_resource type="Script" uid="uid://do0t12i4x5nmh" path="res://botao_multiplicador_clique.gd" id="8_ir8iy"]
+[ext_resource type="Texture2D" uid="uid://bp1v03ruewifm" path="res://17_Sem_Titulo_20260517190442.png" id="8_mryly"]
+[ext_resource type="Texture2D" path="res://assets/itens/lapis.png" id="8_nr8wp"]
+[ext_resource type="Script" uid="uid://bxiooi1hyklht" path="res://botao_evento_especial.gd" id="9_hqns4"]
+[ext_resource type="Texture2D" uid="uid://6w1dih617p21" path="res://17_Sem_Titulo_20260517190558.png" id="9_kq1c5"]
+[ext_resource type="Texture2D" path="res://assets/itens/apontador.png" id="10_flf07"]
+[ext_resource type="Script" uid="uid://dwpq22qkaq2ji" path="res://botao_multiplicador_passivo.gd" id="11_0h7mo"]
+[ext_resource type="Texture2D" uid="uid://bpwbsl87eio7c" path="res://livrio 1.png" id="11_540hr"]
+[ext_resource type="Script" uid="uid://bol5u1i5nt2iq" path="res://prova_1.gd" id="11_ebxd8"]
+[ext_resource type="Texture2D" uid="uid://dsv68u4mtk0eu" path="res://17_Sem_Titulo_20260613155131.png" id="12_6ip5v"]
+[ext_resource type="Texture2D" path="res://assets/itens/marca_texto.png" id="12_k73cj"]
+[ext_resource type="Texture2D" uid="uid://b8e34ps32ixup" path="res://17_Sem_Titulo_20260613155135.png" id="13_q5dlx"]
+[ext_resource type="Texture2D" uid="uid://dxmjldp8wb0je" path="res://17_Sem_Titulo_20260613155139.png" id="14_c4wnb"]
+[ext_resource type="Texture2D" uid="uid://cdie8kpdskg2j" path="res://17_Sem_Titulo_20260613155143.png" id="15_7plk7"]
+[ext_resource type="Texture2D" path="res://assets/itens/corretivo.png" id="15_rjqkl"]
+[ext_resource type="Texture2D" uid="uid://dn06ku2t1blah" path="res://17_Sem_Titulo_20260613155502.png" id="16_fbwgr"]
+[ext_resource type="Texture2D" uid="uid://bfec1iaw2c80k" path="res://APAGANDO_1.png" id="17_7plk7"]
+[ext_resource type="Texture2D" uid="uid://m0maocw3ll7r" path="res://APAGANDO_2.png" id="18_fbwgr"]
+[ext_resource type="Texture2D" path="res://assets/itens/apontador.png" id="18_k73cj"]
+[ext_resource type="Texture2D" uid="uid://n8taujcobnpb" path="res://15_Sem_Titulo_20260613164547.png" id="19_6ip5v"]
+[ext_resource type="Texture2D" uid="uid://u53vds5j2kkm" path="res://505_Sem_Titulo_20260615184706.png" id="22_7mj2a"]
+[ext_resource type="FontFile" uid="uid://brokdgok7wvkd" path="res://FONTES/KGTenThousandReasons.ttf" id="22_88qy3"]
+[ext_resource type="Texture2D" uid="uid://cux6depa5l7ek" path="res://469_Sem_Titulo_20260516215547.png" id="23_b3bpi"]
+[ext_resource type="Texture2D" uid="uid://d3xs1fjl13n21" path="res://505_Sem_Titulo_20260615184715.png" id="23_fshgd"]
+[ext_resource type="PackedScene" uid="uid://cftkq4a14ohdv" path="res://minigames_quiz.tscn" id="30_2u7jv"]
+[ext_resource type="Script" uid="uid://dc8xx8uynelj1" path="res://botao_evento_especial_2.gd" id="32_lbrxf"]
+[ext_resource type="AudioStream" uid="uid://clnikenp56f66" path="res://TCT - OST 4.mp3" id="37_6ip5v"]
+[ext_resource type="AudioStream" uid="uid://kyoqtedvpxm5" path="res://song prova.mp3" id="38_q5dlx"]
+[ext_resource type="Script" uid="uid://domug8pphhsxt" path="res://prova_2.gd" id="42_xjt7e"]
+[ext_resource type="PackedScene" uid="uid://ds1i062ntfnw3" path="res://minigames_quiz2.tscn" id="43_xjt7e"]
+[ext_resource type="Script" uid="uid://brnrantbpoy2k" path="res://button.gd" id="44_0xo8l"]
+
+[ext_resource type="Script" path="res://vidas_prova.gd" id="45_vidas"]
+
+[sub_resource type="StyleBoxFlat" id="StyleHUD"]
+bg_color = Color(0.965, 0.937, 0.79, 0.94)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.25, 0.18, 0.1, 0.9)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0, 0, 0, 0.28)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleLoja"]
+bg_color = Color(0.96, 0.91, 0.72, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.25, 0.15, 0.08, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+shadow_color = Color(0, 0, 0, 0.45)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleButtonNormal"]
+bg_color = Color(0.98, 0.95, 0.82, 0.96)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.35, 0.23, 0.12, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleButtonHover"]
+bg_color = Color(1, 0.88, 0.45, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.32, 0.19, 0.08, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0, 0, 0, 0.2)
+shadow_size = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleButtonPressed"]
+bg_color = Color(0.85, 0.68, 0.28, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.28, 0.16, 0.06, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleButtonDisabled"]
+bg_color = Color(0.58, 0.55, 0.48, 0.9)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.35, 0.33, 0.29, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleClose"]
+bg_color = Color(0.68, 0.2, 0.16, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[sub_resource type="StyleBoxFlat" id="StyleCloseHover"]
+bg_color = Color(0.9, 0.31, 0.22, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[sub_resource type="StyleBoxFlat" id="StyleVolume"]
+bg_color = Color(0.08, 0.22, 0.17, 0.9)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.86, 0.8, 0.52, 0.95)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[sub_resource type="StyleBoxFlat" id="StyleVolumeHover"]
+bg_color = Color(0.13, 0.35, 0.26, 0.96)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.91, 0.5, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[sub_resource type="StyleBoxFlat" id="StyleResult"]
+bg_color = Color(0.96, 0.94, 0.82, 0.98)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.22, 0.18, 0.11, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0, 0, 0, 0.42)
+shadow_size = 10
+
+[node name="PrincipalGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Fundo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_wg4x1")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Main" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_0hol4")
+texturas_botao_clique = Array[Texture2D]([ExtResource("3_kdubu"), ExtResource("3_1fr6y"), ExtResource("4_2hxjc"), ExtResource("5_ebxd8"), ExtResource("6_2u7jv"), ExtResource("7_24dk6"), ExtResource("8_mryly"), ExtResource("9_kq1c5"), ExtResource("11_540hr"), ExtResource("12_6ip5v"), ExtResource("13_q5dlx"), ExtResource("14_c4wnb"), ExtResource("15_7plk7"), ExtResource("16_fbwgr"), ExtResource("17_7plk7"), ExtResource("18_fbwgr")])
+
+[node name="PainelQI" type="Panel" parent="Main"]
+layout_mode = 0
+offset_left = 157.0
+offset_top = 302.0
+offset_right = 483.0
+offset_bottom = 350.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleHUD")
+
+[node name="Label" type="Label" parent="Main"]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 308.0
+offset_right = 477.0
+offset_bottom = 344.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.08, 0.07, 0.04, 1)
+theme_override_colors/font_outline_color = Color(1, 0.98, 0.87, 0.75)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("22_88qy3")
+theme_override_font_sizes/font_size = 20
+text = "QI: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarcaTexto" type="TextureRect" parent="Main"]
+texture_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 141.0
+offset_top = 218.0
+offset_right = 186.0
+offset_bottom = 253.0
+mouse_filter = 2
+texture = ExtResource("3_rjqkl")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ValorMultiplicadorLabel" type="Label" parent="Main/MarcaTexto"]
+texture_filter = 2
+layout_mode = 0
+offset_left = -3.0
+offset_top = -15.0
+offset_right = 50.0
+offset_bottom = 2.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.08, 0.08, 0.06, 1)
+theme_override_colors/font_outline_color = Color(1, 0.96, 0.68, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("22_88qy3")
+theme_override_font_sizes/font_size = 11
+text = "1.2x"
+horizontal_alignment = 1
+
+[node name="Corretivo" type="TextureRect" parent="Main"]
+texture_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 174.0
+offset_top = 259.0
+offset_right = 203.0
+offset_bottom = 295.0
+mouse_filter = 2
+texture = ExtResource("4_fs4d3")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ValorBonusLabel" type="Label" parent="Main/Corretivo"]
+texture_filter = 2
+layout_mode = 0
+offset_left = -8.0
+offset_top = -14.0
+offset_right = 41.0
+offset_bottom = 2.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.08, 0.08, 0.06, 1)
+theme_override_colors/font_outline_color = Color(1, 0.96, 0.68, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("22_88qy3")
+theme_override_font_sizes/font_size = 11
+text = "+15%"
+horizontal_alignment = 1
+
+[node name="Apontador" type="TextureRect" parent="Main"]
+texture_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 492.0
+offset_top = 236.0
+offset_right = 527.0
+offset_bottom = 275.0
+mouse_filter = 2
+texture = ExtResource("18_k73cj")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ValorPassivoLabel" type="Label" parent="Main/Apontador"]
+texture_filter = 2
+layout_mode = 0
+offset_left = -10.0
+offset_top = -17.0
+offset_right = 48.0
+offset_bottom = 0.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.08, 0.08, 0.06, 1)
+theme_override_colors/font_outline_color = Color(1, 0.96, 0.68, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("22_88qy3")
+theme_override_font_sizes/font_size = 11
+text = "+1/s"
+horizontal_alignment = 1
+
+[node name="LapisMesa" type="TextureRect" parent="Main"]
+visible = false
+layout_mode = 0
+offset_left = 442.0
+offset_top = 223.0
+offset_right = 481.0
+offset_bottom = 279.0
+mouse_filter = 2
+texture_filter = 2
+texture = ExtResource("8_nr8wp")
+expand_mode = 1
+stretch_mode = 5
+[node name="BotaoClique" type="TextureButton" parent="Main"]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 127.0
+offset_right = 433.0
+offset_bottom = 254.0
+focus_mode = 0
+texture_normal = ExtResource("23_b3bpi")
+ignore_texture_size = true
+stretch_mode = 5
+tooltip_text = "Clique para estudar e ganhar QI"
+
+[node name="BotaoLoja" type="TextureButton" parent="Main"]
+texture_filter = 2
+layout_mode = 0
+offset_left = 530.0
+offset_top = 222.0
+offset_right = 610.0
+offset_bottom = 282.0
+focus_mode = 0
+texture_normal = ExtResource("6_d21ai")
+ignore_texture_size = true
+stretch_mode = 5
+tooltip_text = "Abrir loja"
+
+[node name="JanelaLoja" type="Panel" parent="Main/BotaoLoja"]
+visible = false
+z_index = 10
+layout_mode = 0
+offset_left = -480.0
+offset_top = -153.0
+offset_right = 60.0
+offset_bottom = 177.0
+theme_override_styles/panel = SubResource("StyleLoja")
+
+[node name="FundoLoja" type="TextureRect" parent="Main/BotaoLoja/JanelaLoja"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+modulate = Color(1, 1, 1, 0.3)
+texture = ExtResource("6_x0ka3")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TituloLoja" type="Label" parent="Main/BotaoLoja/JanelaLoja"]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 14.0
+offset_right = 464.0
+offset_bottom = 52.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.19, 0.12, 0.06, 1)
+theme_override_colors/font_outline_color = Color(1, 0.94, 0.72, 0.8)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("22_88qy3")
+theme_override_font_sizes/font_size = 24
+text = "LOJA DE MATERIAIS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BotaoFecharLoja" type="Button" parent="Main/BotaoLoja/JanelaLoja"]
+layout_mode = 0
+offset_left = 493.0
+offset_top = 10.0
+offset_right = 529.0
+offset_bottom = 46.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleClose")
+theme_override_styles/hover = SubResource("StyleCloseHover")
+theme_override_styles/pressed = SubResource("StyleClose")
+text = "×"
+tooltip_text = "Fechar loja"
+
+[node name="BotaoUpgradeClique" type="Button" parent="Main/BotaoLoja/JanelaLoja"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 66.0
+offset_right = 252.0
+offset_bottom = 116.0
+theme_override_colors/font_color = Color(0.15, 0.1, 0.05, 1)
+theme_override_colors/font_hover_color = Color(0.12, 0.07, 0.03, 1)
+theme_override_colors/font_disabled_color = Color(0.77, 0.75, 0.69, 1)
+theme_override_fonts/font = ExtResource("22_88qy3")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleButtonNormal")
+theme_override_styles/hover = SubResource("StyleButtonHover")
+theme_override_styles/pressed = SubResource("StyleButtonPressed")
+theme_override_styles/disabled = SubResource("StyleButtonDisabled")
+text = "LÁPIS MELHOR  +1/clique\nCusto: 25 QI"
+script = ExtResource("6_rj586")
+
+[node name="Icone" type="TextureRect" parent="Main/BotaoLoja/JanelaLoja/BotaoUpgradeClique"]
+texture_filter = 2
+layout_mode = 0
+offset_left = 8.0
+offset_top = 9.0
+offset_right = 40.0
+offset_bottom = 41.0
+mouse_filter = 2
+texture = ExtResource("8_nr8wp")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BotaoGeradorQI" type="Button" parent="Main/BotaoLoja/JanelaLoja"]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 66.0
+offset_right = 508.0
+offset_bottom = 116.0
+theme_override_colors/font_color = Color(0.15, 0.1, 0.05, 1)
+theme_override_colors/font_hover_color = Color(0.12, 0.07, 0.03, 1)
+theme_override_colors/font_disabled_color = Color(0.77, 0.75, 0.69, 1)
+theme_override_fonts/font = ExtResource("22_88qy3")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleButtonNormal")
+theme_override_styles/hover = SubResource("StyleButtonHover")
+theme_override_styles/pressed = SubResource("StyleButtonPressed")
+theme_override_styles/disabled = SubResource("StyleButtonDisabled")
+text = "APONTADOR  +1 QI/s\nCusto: 55 QI"
+script = ExtResource("7_4d7sh")
+
+[node name="Icone" type="TextureRect" parent="Main/BotaoLoja/JanelaLoja/BotaoGeradorQI"]
+texture_filter = 2
+layout_mode = 0
+offset_left = 8.0
+offset_top = 9.0
+offset_right = 40.0
+offset_bottom = 41.0
+mouse_filter = 2
+texture = ExtResource("10_flf07")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BotaoMultiplicadorClique" type="Button" parent="Main/BotaoLoja/JanelaLoja"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 128.0
+offset_right = 252.0
+offset_bottom = 178.0
+theme_override_colors/font_color = Color(0.15, 0.1, 0.05, 1)
+theme_override_colors/font_hover_color = Color(0.12, 0.07, 0.03, 1)
+theme_override_colors/font_disabled_color = Color(0.77, 0.75, 0.69, 1)
+theme_override_fonts/font = ExtResource("22_88qy3")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleButtonNormal")
+theme_override_styles/hover = SubResource("StyleButtonHover")
+theme_override_styles/pressed = SubResource("StyleButtonPressed")
+theme_override_styles/disabled = SubResource("StyleButtonDisabled")
+text = "MARCA-TEXTO  1x\nCusto: 250 QI"
+script = ExtResource("8_ir8iy")
+
+[node name="Icone" type="TextureRect" parent="Main/BotaoLoja/JanelaLoja/BotaoMultiplicadorClique"]
+texture_filter = 2
+layout_mode = 0
+offset_left = 8.0
+offset_top = 9.0
+offset_right = 40.0
+offset_bottom = 41.0
+mouse_filter = 2
+texture = ExtResource("12_k73cj")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BotaoMultiplicadorPassivo" type="Button" parent="Main/BotaoLoja/JanelaLoja"]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 128.0
+offset_right = 508.0
+offset_bottom = 178.0
+theme_override_colors/font_color = Color(0.15, 0.1, 0.05, 1)
+theme_override_colors/font_hover_color = Color(0.12, 0.07, 0.03, 1)
+theme_override_colors/font_disabled_color = Color(0.77, 0.75, 0.69, 1)
+theme_override_fonts/font = ExtResource("22_88qy3")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleButtonNormal")
+theme_override_styles/hover = SubResource("StyleButtonHover")
+theme_override_styles/pressed = SubResource("StyleButtonPressed")
+theme_override_styles/disabled = SubResource("StyleButtonDisabled")
+text = "CORRETIVO  +0% passivo\nCusto: 650 QI"
+script = ExtResource("11_0h7mo")
+
+[node name="Icone" type="TextureRect" parent="Main/BotaoLoja/JanelaLoja/BotaoMultiplicadorPassivo"]
+texture_filter = 2
+layout_mode = 0
+offset_left = 8.0
+offset_top = 9.0
+offset_right = 40.0
+offset_bottom = 41.0
+mouse_filter = 2
+texture = ExtResource("15_rjqkl")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BotaoUpgrade3" type="Button" parent="Main/BotaoLoja/JanelaLoja"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 202.0
+offset_right = 252.0
+offset_bottom = 252.0
+disabled = true
+theme_override_colors/font_disabled_color = Color(0.82, 0.81, 0.76, 1)
+theme_override_fonts/font = ExtResource("22_88qy3")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/disabled = SubResource("StyleButtonDisabled")
+text = "APOSTILA\nEm breve"
+tooltip_text = "Funcionalidade ainda não implementada"
+
+[node name="BotaoEventoEspecial" type="Button" parent="Main/BotaoLoja/JanelaLoja"]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 202.0
+offset_right = 508.0
+offset_bottom = 252.0
+theme_override_colors/font_color = Color(0.15, 0.1, 0.05, 1)
+theme_override_colors/font_hover_color = Color(0.12, 0.07, 0.03, 1)
+theme_override_colors/font_disabled_color = Color(0.77, 0.75, 0.69, 1)
+theme_override_fonts/font = ExtResource("22_88qy3")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleButtonNormal")
+theme_override_styles/hover = SubResource("StyleButtonHover")
+theme_override_styles/pressed = SubResource("StyleButtonPressed")
+theme_override_styles/disabled = SubResource("StyleButtonDisabled")
+text = "SEMINÁRIO 1\nCusto: 12 QI"
+script = ExtResource("9_hqns4")
+
+[node name="BotaoEventoEspecial2" type="Button" parent="Main/BotaoLoja/JanelaLoja"]
+visible = false
+layout_mode = 0
+offset_left = 288.0
+offset_top = 202.0
+offset_right = 508.0
+offset_bottom = 252.0
+theme_override_colors/font_color = Color(0.15, 0.1, 0.05, 1)
+theme_override_colors/font_hover_color = Color(0.12, 0.07, 0.03, 1)
+theme_override_colors/font_disabled_color = Color(0.77, 0.75, 0.69, 1)
+theme_override_fonts/font = ExtResource("22_88qy3")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleButtonNormal")
+theme_override_styles/hover = SubResource("StyleButtonHover")
+theme_override_styles/pressed = SubResource("StyleButtonPressed")
+theme_override_styles/disabled = SubResource("StyleButtonDisabled")
+text = "SEMINÁRIO 2\nCusto: 25 QI"
+script = ExtResource("32_lbrxf")
+
+[node name="MensagemLoja" type="Label" parent="Main/BotaoLoja/JanelaLoja"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 276.0
+offset_right = 505.0
+offset_bottom = 310.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.22, 0.17, 0.09, 1)
+theme_override_colors/font_outline_color = Color(1, 0.95, 0.75, 0.9)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("22_88qy3")
+theme_override_font_sizes/font_size = 13
+text = "Passe o mouse para ver os requisitos."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BotaoSair" type="TextureButton" parent="Main"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 302.0
+offset_right = 48.0
+offset_bottom = 350.0
+focus_mode = 0
+texture_normal = ExtResource("4_kdubu")
+texture_hover = ExtResource("5_d21ai")
+tooltip_text = "Salvar e sair"
+
+[node name="Prova1" type="Control" parent="Main"]
+visible = false
+z_index = 20
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("11_ebxd8")
+lista_total_minigames = Array[PackedScene]([ExtResource("30_2u7jv")])
+
+[node name="Pronva1Fundo" type="TextureRect" parent="Main/Prova1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("19_6ip5v")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="ContainerVidas" type="Control" parent="Main/Prova1"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 12.0
+offset_right = 176.0
+offset_bottom = 54.0
+mouse_filter = 2
+script = ExtResource("45_vidas")
+[node name="ResultadoPainel" type="PanelContainer" parent="Main/Prova1"]
+visible = false
+z_index = 30
+layout_mode = 0
+offset_left = 145.0
+offset_top = 112.0
+offset_right = 495.0
+offset_bottom = 244.0
+theme_override_styles/panel = SubResource("StyleResult")
+
+[node name="Conteudo" type="VBoxContainer" parent="Main/Prova1/ResultadoPainel"]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="ResultadoTitulo" type="Label" parent="Main/Prova1/ResultadoPainel/Conteudo"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("22_88qy3")
+theme_override_font_sizes/font_size = 28
+text = "APROVADO!"
+horizontal_alignment = 1
+
+[node name="ResultadoDetalhe" type="Label" parent="Main/Prova1/ResultadoPainel/Conteudo"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.16, 0.13, 0.08, 1)
+theme_override_fonts/font = ExtResource("22_88qy3")
+theme_override_font_sizes/font_size = 15
+text = "5 respostas corretas"
+horizontal_alignment = 1
+
+[node name="Prova2" type="Control" parent="Main"]
+visible = false
+z_index = 20
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("42_xjt7e")
+lista_total_minigames = Array[PackedScene]([ExtResource("43_xjt7e")])
+
+[node name="Pronva1Fundo" type="TextureRect" parent="Main/Prova2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("19_6ip5v")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="ContainerVidas" type="Control" parent="Main/Prova2"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 12.0
+offset_right = 176.0
+offset_bottom = 54.0
+mouse_filter = 2
+script = ExtResource("45_vidas")
+[node name="ResultadoPainel" type="PanelContainer" parent="Main/Prova2"]
+visible = false
+z_index = 30
+layout_mode = 0
+offset_left = 145.0
+offset_top = 112.0
+offset_right = 495.0
+offset_bottom = 244.0
+theme_override_styles/panel = SubResource("StyleResult")
+
+[node name="Conteudo" type="VBoxContainer" parent="Main/Prova2/ResultadoPainel"]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="ResultadoTitulo" type="Label" parent="Main/Prova2/ResultadoPainel/Conteudo"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("22_88qy3")
+theme_override_font_sizes/font_size = 28
+text = "APROVADO!"
+horizontal_alignment = 1
+
+[node name="ResultadoDetalhe" type="Label" parent="Main/Prova2/ResultadoPainel/Conteudo"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.16, 0.13, 0.08, 1)
+theme_override_fonts/font = ExtResource("22_88qy3")
+theme_override_font_sizes/font_size = 15
+text = "5 respostas corretas"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Main"]
+layout_mode = 0
+offset_left = 490.0
+offset_top = 20.0
+offset_right = 630.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(1, 0.96, 0.76, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0.86, 1)
+theme_override_fonts/font = ExtResource("22_88qy3")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleVolume")
+theme_override_styles/hover = SubResource("StyleVolumeHover")
+theme_override_styles/pressed = SubResource("StyleVolume")
+text = "SOM  100%"
+tooltip_text = "Alterar volume"
+script = ExtResource("44_0xo8l")
+
+[node name="AudioStreamPlayerPrincipal" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("37_6ip5v")
+volume_db = -3.184
+autoplay = true
+parameters/looping = true
+
+[node name="AudioStreamPlayerProva" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("38_q5dlx")
+parameters/looping = true
+
+[connection signal="pressed" from="Main/BotaoClique" to="Main" method="_on_botao_clique_pressed"]
+[connection signal="pressed" from="Main/BotaoLoja" to="Main" method="_on_botao_loja_pressed"]
+[connection signal="pressed" from="Main/BotaoLoja/JanelaLoja/BotaoFecharLoja" to="Main" method="_on_botao_fechar_loja_pressed"]
+[connection signal="pressed" from="Main/BotaoSair" to="Main" method="_on_botao_sair_pressed"]

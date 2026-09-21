@@ -1,0 +1,219 @@
+[gd_scene format=3 uid="uid://ds1i062ntfnw3"]
+
+[ext_resource type="Script" uid="uid://c8y4ln5c77vq0" path="res://minigames_quiz_2.gd" id="1_mtdk2"]
+[ext_resource type="Script" uid="uid://c3udvlu3bux7d" path="res://barra_tempo_2.gd" id="3_mtdk2"]
+[ext_resource type="FontFile" uid="uid://brokdgok7wvkd" path="res://FONTES/KGTenThousandReasons.ttf" id="4_font"]
+
+[sub_resource type="StyleBoxFlat" id="StyleQuestion"]
+bg_color = Color(1, 0.98, 0.88, 0.82)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.27, 0.2, 0.12, 0.85)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleAnswer"]
+bg_color = Color(0.98, 0.96, 0.86, 0.96)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.25, 0.19, 0.11, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleAnswerHover"]
+bg_color = Color(1, 0.88, 0.48, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.2, 0.14, 0.07, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0, 0, 0, 0.18)
+shadow_size = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleAnswerPressed"]
+bg_color = Color(0.84, 0.68, 0.34, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.2, 0.14, 0.07, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBarBackground"]
+bg_color = Color(0.18, 0.16, 0.12, 0.8)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.1, 0.09, 0.06, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[sub_resource type="StyleBoxFlat" id="StyleBarFill"]
+bg_color = Color(0.25, 0.68, 0.32, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[node name="MinigamesQuiz" type="Control"]
+z_index = 5
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mtdk2")
+
+[node name="PainelPergunta" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 62.0
+offset_right = 578.0
+offset_bottom = 126.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleQuestion")
+
+[node name="TextoPergunta" type="Label" parent="."]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 66.0
+offset_right = 564.0
+offset_bottom = 122.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.1, 0.08, 0.05, 1)
+theme_override_fonts/font = ExtResource("4_font")
+theme_override_font_sizes/font_size = 17
+text = "Qual movimento literário foca no objetivismo?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ContadorPerguntas" type="Label" parent="."]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 16.0
+offset_right = 620.0
+offset_bottom = 54.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.12, 0.1, 0.06, 1)
+theme_override_colors/font_outline_color = Color(1, 0.96, 0.76, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("4_font")
+theme_override_font_sizes/font_size = 18
+text = "PORTUGUÊS • 0 / 5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Opcao1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 139.0
+offset_right = 550.0
+offset_bottom = 181.0
+theme_override_colors/font_color = Color(0.12, 0.09, 0.05, 1)
+theme_override_colors/font_hover_color = Color(0.1, 0.07, 0.03, 1)
+theme_override_colors/font_disabled_color = Color(0.14, 0.11, 0.07, 1)
+theme_override_fonts/font = ExtResource("4_font")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleAnswer")
+theme_override_styles/hover = SubResource("StyleAnswerHover")
+theme_override_styles/pressed = SubResource("StyleAnswerPressed")
+theme_override_styles/disabled = SubResource("StyleAnswer")
+text = "Realismo"
+
+[node name="Opcao2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 187.0
+offset_right = 550.0
+offset_bottom = 229.0
+theme_override_colors/font_color = Color(0.12, 0.09, 0.05, 1)
+theme_override_colors/font_hover_color = Color(0.1, 0.07, 0.03, 1)
+theme_override_colors/font_disabled_color = Color(0.14, 0.11, 0.07, 1)
+theme_override_fonts/font = ExtResource("4_font")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleAnswer")
+theme_override_styles/hover = SubResource("StyleAnswerHover")
+theme_override_styles/pressed = SubResource("StyleAnswerPressed")
+theme_override_styles/disabled = SubResource("StyleAnswer")
+text = "Romantismo"
+
+[node name="Opcao3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 235.0
+offset_right = 550.0
+offset_bottom = 277.0
+theme_override_colors/font_color = Color(0.12, 0.09, 0.05, 1)
+theme_override_colors/font_hover_color = Color(0.1, 0.07, 0.03, 1)
+theme_override_colors/font_disabled_color = Color(0.14, 0.11, 0.07, 1)
+theme_override_fonts/font = ExtResource("4_font")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleAnswer")
+theme_override_styles/hover = SubResource("StyleAnswerHover")
+theme_override_styles/pressed = SubResource("StyleAnswerPressed")
+theme_override_styles/disabled = SubResource("StyleAnswer")
+text = "Modernismo"
+
+[node name="FeedbackLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 281.0
+offset_right = 570.0
+offset_bottom = 314.0
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(1, 0.96, 0.8, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_font")
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BarraVisual" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 322.0
+offset_right = 570.0
+offset_bottom = 350.0
+mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBarBackground")
+theme_override_styles/fill = SubResource("StyleBarFill")
+value = 100.0
+show_percentage = false
+script = ExtResource("3_mtdk2")
+
+[node name="TempoTexto" type="Label" parent="BarraVisual"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 0.9, 1)
+theme_override_colors/font_outline_color = Color(0.08, 0.08, 0.05, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("4_font")
+theme_override_font_sizes/font_size = 13
+text = "80s"
+horizontal_alignment = 1
+vertical_alignment = 1
