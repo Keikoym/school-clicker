@@ -432,7 +432,7 @@ theme_override_styles/normal = SubResource("StyleButtonNormal")
 theme_override_styles/hover = SubResource("StyleButtonHover")
 theme_override_styles/pressed = SubResource("StyleButtonPressed")
 theme_override_styles/disabled = SubResource("StyleButtonDisabled")
-text = "LÁPIS MELHOR  +1/clique\nCusto: 25 QI"
+text = "LÁPIS MELHOR  +1/clique\nCusto: 20 QI"
 script = ExtResource("6_rj586")
 
 [node name="Icone" type="TextureRect" parent="Main/BotaoLoja/JanelaLoja/BotaoUpgradeClique"]
@@ -462,7 +462,7 @@ theme_override_styles/normal = SubResource("StyleButtonNormal")
 theme_override_styles/hover = SubResource("StyleButtonHover")
 theme_override_styles/pressed = SubResource("StyleButtonPressed")
 theme_override_styles/disabled = SubResource("StyleButtonDisabled")
-text = "APONTADOR  +1 QI/s\nCusto: 55 QI"
+text = "APONTADOR  +1 QI/s\nCusto: 60 QI"
 script = ExtResource("7_4d7sh")
 
 [node name="Icone" type="TextureRect" parent="Main/BotaoLoja/JanelaLoja/BotaoGeradorQI"]
@@ -492,7 +492,7 @@ theme_override_styles/normal = SubResource("StyleButtonNormal")
 theme_override_styles/hover = SubResource("StyleButtonHover")
 theme_override_styles/pressed = SubResource("StyleButtonPressed")
 theme_override_styles/disabled = SubResource("StyleButtonDisabled")
-text = "MARCA-TEXTO  1x\nCusto: 250 QI"
+text = "MARCA-TEXTO  1x\nCusto: 160 QI"
 script = ExtResource("8_ir8iy")
 
 [node name="Icone" type="TextureRect" parent="Main/BotaoLoja/JanelaLoja/BotaoMultiplicadorClique"]
@@ -522,7 +522,7 @@ theme_override_styles/normal = SubResource("StyleButtonNormal")
 theme_override_styles/hover = SubResource("StyleButtonHover")
 theme_override_styles/pressed = SubResource("StyleButtonPressed")
 theme_override_styles/disabled = SubResource("StyleButtonDisabled")
-text = "CORRETIVO  +0% passivo\nCusto: 650 QI"
+text = "CORRETIVO  +0% passivo\nCusto: 240 QI"
 script = ExtResource("11_0h7mo")
 
 [node name="Icone" type="TextureRect" parent="Main/BotaoLoja/JanelaLoja/BotaoMultiplicadorPassivo"]
@@ -548,8 +548,8 @@ theme_override_colors/font_disabled_color = Color(0.82, 0.81, 0.76, 1)
 theme_override_fonts/font = ExtResource("22_88qy3")
 theme_override_font_sizes/font_size = 12
 theme_override_styles/disabled = SubResource("StyleButtonDisabled")
-text = "APOSTILA\nEm breve"
-tooltip_text = "Funcionalidade ainda não implementada"
+text = "MOCHILA\nLivros e conquistas"
+tooltip_text = "Abrir livros, materiais, conquistas e revisão"
 
 [node name="BotaoEventoEspecial" type="Button" parent="Main/BotaoLoja/JanelaLoja"]
 layout_mode = 0
@@ -566,7 +566,7 @@ theme_override_styles/normal = SubResource("StyleButtonNormal")
 theme_override_styles/hover = SubResource("StyleButtonHover")
 theme_override_styles/pressed = SubResource("StyleButtonPressed")
 theme_override_styles/disabled = SubResource("StyleButtonDisabled")
-text = "SEMINÁRIO 1\nCusto: 12 QI"
+text = "SEMINÁRIO 1\nCusto: 400 QI"
 script = ExtResource("9_hqns4")
 
 [node name="BotaoEventoEspecial2" type="Button" parent="Main/BotaoLoja/JanelaLoja"]
@@ -585,7 +585,7 @@ theme_override_styles/normal = SubResource("StyleButtonNormal")
 theme_override_styles/hover = SubResource("StyleButtonHover")
 theme_override_styles/pressed = SubResource("StyleButtonPressed")
 theme_override_styles/disabled = SubResource("StyleButtonDisabled")
-text = "SEMINÁRIO 2\nCusto: 25 QI"
+text = "SEMINÁRIO 2\nCusto: 1600 QI"
 script = ExtResource("32_lbrxf")
 
 [node name="MensagemLoja" type="Label" parent="Main/BotaoLoja/JanelaLoja"]

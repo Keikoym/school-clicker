@@ -1,6 +1,16 @@
 # Arquitetura — notas de manutenção
 
-O projeto usa Godot e GDScript. `principalgame.tscn` contém o gameplay e `main.gd` coordena QI, loja, progresso, áudio e provas. Os scripts `botao_*.gd` mantêm as regras de compra e os custos.
+O projeto usa Godot e GDScript. `principalgame.tscn` contém o gameplay e `main.gd` coordena QI, loja, progresso, áudio e provas. Os scripts `botao_*.gd` mantêm as regras de compra; `economia.gd` centraliza os preços dos quatro upgrades e duas provas.
+
+## Rework de preços e apresentação — 21/09/2026
+
+- `economia.gd::preco(tipo, nivel)` calcula preço inicial × crescimento elevado ao nível, arredondado para múltiplos de 5, limitado a 1 trilhão. `nivel_multiplicador()` e `nivel_passivo()` recuperam o nível dos valores persistidos.
+- `main.gd::_aplicar_estado_upgrades()` ignora o custo legado salvo e deriva o preço dos níveis restaurados. Carregamentos repetidos não acumulam aumentos. O formato do save permanece na versão 1; QI, aquisições e conquistas não são apagados.
+- `apresentacao.gd::configurar()` aplica estilos nativos à loja, cria `SaldoLoja` e `ResumoEstudo` e substitui visualmente `BotaoSair` por um botão textual ligado ao mesmo salvamento/saída. `atualizar()` reflete QI e produção; `numero()` abrevia valores grandes no HUD. A interface continua no canvas lógico existente, sem novo sistema responsivo.
+- `colecao.gd::_montar_conquistas()` cria resumo, filtros e cartões; `_atualizar_conquistas()` reflete progresso real sem revogar conquistas já obtidas. `_filtrar_conquistas()` altera somente a visibilidade. `selo_conquista.gd` desenha medalhas com primitivas nativas, sem imagens novas.
+- Preços únicos dos seis colecionáveis permanecem em `colecao.gd`; a tabela atual está em `GAME_DESIGN.md`.
+- `tests/test_rework.gd` verifica 12 cenários de preços, migração e conquistas. Em execução gráfica, também produz capturas ignoradas pelo Git. Os 86 testes comportamentais anteriores passaram após o rework; a auditoria passou com 26 scripts.
+- O histórico Git começa no snapshot anterior a este rework. Consulte `VERSIONS.md` para distinguir esse código do ZIP compilado antigo.
 
 ## Usabilidade da loja — 21/09/2026
 

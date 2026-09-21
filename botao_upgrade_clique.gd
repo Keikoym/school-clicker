@@ -3,7 +3,7 @@ extends Button
 # Sinal personalizado enviado para o Main
 signal clique_melhorado(novo_valor)
 
-var custo_upgrade: int = 25
+var custo_upgrade: int = preload("res://economia.gd").preco("clique", 0)
 var valor_do_clique_atual: int = 1
 
 # Referência direta para o nó principal (Main) do jogo
@@ -44,7 +44,7 @@ func _on_pressed_upgrade() -> void:
 			no_main.qi -= custo_upgrade  # Tira o QI do jogador no Main
 			
 			valor_do_clique_atual += 1   # Melhora o poder do clique
-			custo_upgrade = int(custo_upgrade * 1.8) # Aumenta o custo
+			custo_upgrade = preload("res://economia.gd").preco("clique", valor_do_clique_atual - 1)
 			
 			atualizar_texto_botao()
 			no_main.atualizar_interface() # Atualiza o placar do topo

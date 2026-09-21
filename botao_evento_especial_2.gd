@@ -1,6 +1,6 @@
 extends Button
 
-var custo_upgrade: int = 25 # Custo maior para a segunda prova (ajuste como quiser)
+var custo_upgrade: int = preload("res://economia.gd").PROVA_2
 var no_main: Node
 var no_prova1: Node # Referência para a Prova1 (para saber quando ela foi vencida)
 var no_prova2: Node # Referência para a Prova2 (que este botão vai abrir)

@@ -3,7 +3,7 @@ extends Button
 # Sinal personalizado que envia o bônus passivo total para o Main
 signal bonus_passivo_atualizado(novo_bonus)
 
-var custo_upgrade: int = 650       # Começa custando 2500 QI
+var custo_upgrade: int = preload("res://economia.gd").preco("passivo", 0)
 var bonus_porcentagem_total: float = 0.0
 
 # Referência para o Main
@@ -47,7 +47,7 @@ func _on_pressed_bonus_passivo() -> void:
 			else:
 				bonus_porcentagem_total += 0.05
 			
-			custo_upgrade = int(custo_upgrade * 2.0) # Dobra o preço a cada compra
+			custo_upgrade = preload("res://economia.gd").preco("passivo", preload("res://economia.gd").nivel_passivo(bonus_porcentagem_total))
 			
 			atualizar_texto_botao()
 			no_main.atualizar_interface()

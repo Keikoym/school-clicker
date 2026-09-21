@@ -4,6 +4,12 @@ extends RefCounted
 # Adicione uma entrada no INÍCIO; mantenha o histórico anterior.
 # Registre data, título e apenas mudanças realmente implementadas.
 const HISTORICO := [
+	{"data": "21/09/2026", "titulo": "Economia e interface de estudos", "mudancas": [
+		"Novos preços de upgrades, colecionáveis e seminários, preservando o progresso salvo.",
+		"Loja com visual uniforme, saldo e produção visíveis; saída textual sem corte.",
+		"Conquistas com medalhas, barras de progresso, resumo e filtros.",
+		"Histórico local de versões iniciado antes do rework."
+	]},
 	{"data": "21/09/2026", "titulo": "Ferramentas de desenvolvedor e revisão", "mudancas": [
 		"Nova seção Desenvolvedor com sessão debug temporária e indicador de FPS.",
 		"QI extra para testar compras; alterações de debug não são salvas.",

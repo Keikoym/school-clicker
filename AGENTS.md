@@ -11,6 +11,7 @@ School Clicker é um jogo escolar do tipo clicker feito em Godot 4.7, usando GDS
 - `prova_1.gd`, `prova_2.gd`: vidas, tempo e sequência das provas.
 - `minigames_quiz.tscn`/`.gd` e `minigames_quiz2.tscn`/`minigames_quiz_2.gd`: quizzes atuais.
 - Scripts `botao_*.gd`: compras e acesso aos seminários.
+- `economia.gd`: preços por nível; `apresentacao.gd`: tema da loja e HUD; `colecao.gd` e `selo_conquista.gd`: mochila e conquistas.
 
 Antes de alterações grandes, consulte `docs/GAME_DESIGN.md`, `docs/ARCHITECTURE.md` e `docs/TODO.md`.
 

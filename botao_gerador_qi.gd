@@ -3,7 +3,7 @@ extends Button
 # Sinal personalizado enviado para o Main para ativar a produção por segundo
 signal gerador_comprado(producao_por_segundo)
 
-var custo_upgrade: int = 55
+var custo_upgrade: int = preload("res://economia.gd").preco("gerador", 0)
 var producao_atual: int = 0
 
 # Referência direta para o nó principal (Main) do jogo
@@ -43,7 +43,7 @@ func _on_pressed_gerador() -> void:
 			no_main.qi -= custo_upgrade  # Gasta o QI do jogador
 			
 			producao_atual += 1          # Aumenta a produção (+1 QI/segundo)
-			custo_upgrade = int(custo_upgrade * 1.5) # Próximo fica mais caro
+			custo_upgrade = preload("res://economia.gd").preco("gerador", producao_atual)
 			
 			atualizar_texto_botao()
 			no_main.atualizar_interface() # Atualiza o placar do topo

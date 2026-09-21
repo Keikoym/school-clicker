@@ -61,6 +61,7 @@ var itens_mesa: Control
 
 func _ready() -> void:
 	_configurar_loja_modal()
+	preload("res://apresentacao.gd").configurar(self)
 	if janela_loja:
 		posicao_centro_loja = janela_loja.position
 		janela_loja.visible = false
@@ -166,6 +167,7 @@ func atualizar_interface() -> void:
 			contador_label.text = "QI: " + str(qi)
 	_aplicar_visibilidade_objetos()
 	_atualizar_disponibilidade_loja()
+	preload("res://apresentacao.gd").atualizar(self)
 	if colecao:
 		colecao.atualizar()
 		if itens_mesa:
@@ -656,33 +658,33 @@ func _aplicar_estado_upgrades(upgrades: Dictionary) -> void:
 	var botao_upgrade_clique = find_child("BotaoUpgradeClique", true, false)
 	var dados_clique: Dictionary = _obter_dicionario(upgrades, "clique")
 	if botao_upgrade_clique:
-		botao_upgrade_clique.custo_upgrade = max(1, int(dados_clique.get("custo", botao_upgrade_clique.custo_upgrade)))
 		botao_upgrade_clique.valor_do_clique_atual = max(1, int(dados_clique.get("valor", valor_do_clique_base)))
 		valor_do_clique_base = botao_upgrade_clique.valor_do_clique_atual
+		botao_upgrade_clique.custo_upgrade = preload("res://economia.gd").preco("clique", valor_do_clique_base - 1)
 		botao_upgrade_clique.atualizar_texto_botao()
 
 	var botao_gerador = find_child("BotaoGeradorQI", true, false)
 	var dados_gerador: Dictionary = _obter_dicionario(upgrades, "gerador")
 	if botao_gerador:
-		botao_gerador.custo_upgrade = max(1, int(dados_gerador.get("custo", botao_gerador.custo_upgrade)))
 		botao_gerador.producao_atual = max(0, int(dados_gerador.get("producao", qi_por_segundo_base)))
 		qi_por_segundo_base = botao_gerador.producao_atual
+		botao_gerador.custo_upgrade = preload("res://economia.gd").preco("gerador", qi_por_segundo_base)
 		botao_gerador.atualizar_texto_botao()
 
 	var botao_multiplicador = find_child("BotaoMultiplicadorClique", true, false)
 	var dados_multiplicador: Dictionary = _obter_dicionario(upgrades, "multiplicador_clique")
 	if botao_multiplicador:
-		botao_multiplicador.custo_upgrade = max(1, int(dados_multiplicador.get("custo", botao_multiplicador.custo_upgrade)))
 		botao_multiplicador.multiplicador_atual = max(1.0, float(dados_multiplicador.get("multiplicador", multiplicador_clique)))
 		multiplicador_clique = botao_multiplicador.multiplicador_atual
+		botao_multiplicador.custo_upgrade = preload("res://economia.gd").preco("multiplicador", preload("res://economia.gd").nivel_multiplicador(multiplicador_clique))
 		botao_multiplicador.atualizar_texto_botao()
 
 	var botao_passivo = find_child("BotaoMultiplicadorPassivo", true, false)
 	var dados_passivo: Dictionary = _obter_dicionario(upgrades, "bonus_passivo")
 	if botao_passivo:
-		botao_passivo.custo_upgrade = max(1, int(dados_passivo.get("custo", botao_passivo.custo_upgrade)))
 		botao_passivo.bonus_porcentagem_total = max(0.0, float(dados_passivo.get("bonus", multiplicador_passivo_bonus)))
 		multiplicador_passivo_bonus = botao_passivo.bonus_porcentagem_total
+		botao_passivo.custo_upgrade = preload("res://economia.gd").preco("passivo", preload("res://economia.gd").nivel_passivo(multiplicador_passivo_bonus))
 		botao_passivo.atualizar_texto_botao()
 
 func _aplicar_progressao_provas() -> void:

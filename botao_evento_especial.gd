@@ -1,6 +1,6 @@
 extends Button
 
-var custo_upgrade: int = 12 # Custo do upgrade
+var custo_upgrade: int = preload("res://economia.gd").PROVA_1
 var no_main: Node
 var no_prova: Node # Referência para a Prova1
 

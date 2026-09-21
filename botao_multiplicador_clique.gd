@@ -3,7 +3,7 @@ extends Button
 # Sinal personalizado que envia o novo multiplicador para o Main
 signal multiplicador_melhorado(novo_multiplicador)
 
-var custo_upgrade: int = 250       # Começa custando 250 QI
+var custo_upgrade: int = preload("res://economia.gd").preco("multiplicador", 0)
 var multiplicador_atual: float = 1.0
 
 # Referência para o Main
@@ -44,7 +44,7 @@ func _on_pressed_multiplicador() -> void:
 			else:
 				multiplicador_atual += 0.1
 			
-			custo_upgrade = int(custo_upgrade * 2.2)
+			custo_upgrade = preload("res://economia.gd").preco("multiplicador", preload("res://economia.gd").nivel_multiplicador(multiplicador_atual))
 			
 			atualizar_texto_botao()
 			no_main.atualizar_interface()
@@ -70,4 +70,4 @@ func _on_pressed_multiplicador() -> void:
 			print("QI insuficiente para o Multiplicador!")
 
 func atualizar_texto_botao() -> void:
-	text = "MARCA-TEXTO  " + str(multiplicador_atual) + "x\nCusto: " + str(custo_upgrade) + " QI"
+	text = "MARCA-TEXTO  " + ("%.1f" % multiplicador_atual) + "x\nCusto: " + str(custo_upgrade) + " QI"

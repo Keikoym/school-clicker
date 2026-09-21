@@ -36,7 +36,7 @@ func _run() -> void:
 	main.salvar_progresso()
 	main.qi = 0
 	main.carregar_progresso()
-	verificar(main.qi == 1880 and main.colecao.adquiridos.has("casmurro"), "Funções reais de save/load restauram QI e livro")
+	verificar(main.qi == 1860 and main.colecao.adquiridos.has("casmurro"), "Funções reais de save/load restauram QI e livro")
 	main.qi = 777
 	main.salvar_progresso()
 	main.qi = 0
