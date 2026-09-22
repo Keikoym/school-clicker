@@ -4,6 +4,11 @@ extends RefCounted
 # Adicione uma entrada no INÍCIO; mantenha o histórico anterior.
 # Registre data, título e apenas mudanças realmente implementadas.
 const HISTORICO := [
+	{"data": "21/09/2026", "titulo": "Histórico no GitHub", "mudancas": [
+		"Projeto e versões antes/depois do rework publicados no repositório privado Keikoym/school-clicker.",
+		"Página inicial do repositório com instruções de abertura e links para a documentação.",
+		"Nenhuma alteração nas mecânicas ou nos saves nesta publicação."
+	]},
 	{"data": "21/09/2026", "titulo": "Economia e interface de estudos", "mudancas": [
 		"Novos preços de upgrades, colecionáveis e seminários, preservando o progresso salvo.",
 		"Loja com visual uniforme, saldo e produção visíveis; saída textual sem corte.",

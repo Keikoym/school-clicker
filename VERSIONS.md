@@ -12,4 +12,4 @@ O ZIP original permanece intacto. O executável vazio não é uma versão utiliz
 
 Para consultar uma versão, abra a tag correspondente no histórico Git. Para testar uma versão antiga, prefira uma cópia separada do projeto e preserve o save atual; restaurar código não restaura automaticamente o progresso do jogador.
 
-Publicação no GitHub pendente da conclusão do cadastro/autenticação do proprietário. Nenhum repositório remoto foi criado nesta etapa.
+Histórico publicado no repositório privado [Keikoym/school-clicker](https://github.com/Keikoym/school-clicker), incluindo a branch `main` e as duas tags acima. As tags permitem consultar e baixar cada snapshot sem apagar o estado atual.
