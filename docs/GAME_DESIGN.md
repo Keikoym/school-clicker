@@ -13,9 +13,15 @@ O jogador ganha QI clicando e comprando produção automática. A loja mantém o
 
 O preço é derivado do nível e arredondado para cima ao próximo múltiplo de 5. Seminários custam 400 e 1.600 QI por tentativa, respectivamente. O objetivo do ajuste é tornar os primeiros upgrades acessíveis e espaçar as provas; o ritmo ainda precisa de avaliação em sessões longas. Saves existentes preservam QI e melhorias, recalculando somente os preços futuros. Não há recompensa de QI por aprovação.
 
+## Loja unificada e colas
+
+A loja reúne Melhorias, Livros, Materiais, Colas e Provas em cinco abas na mesma janela. Cartões exibem benefício, preço e saldo faltante; upgrades mostram o ganho antes/depois. Livros e materiais são comprados diretamente, sem abrir a mochila. Conquistas e Revisão continuam acessíveis por atalhos no topo. As provas mostram requisitos e conclusão, inclusive quando bloqueadas.
+
+A cola custa 100 QI e concede um uso. É possível carregar até cinco, com estoque persistido no save. Nas duas provas, o botão `Usar cola` elimina aleatoriamente uma alternativa errada da pergunta atual. Limite de uma cola por pergunta: ela não responde, não concede acertos, não devolve vidas e não pausa o tempo. Não é possível comprar durante uma prova ou consumir durante feedback, após acabar o tempo ou sem estoque. A próxima pergunta restaura as três alternativas. Saves anteriores começam com zero colas.
+
 ## Biblioteca e materiais
 
-O antigo botão “Apostila — em breve” abre a mochila. Há abas de Livros, Materiais, Conquistas e Revisão. Os colecionáveis são compras únicas; seus bônus são somados depois dos multiplicadores existentes. Compras repetidas e compras sem saldo são bloqueadas. A produção dos itens funciona mesmo sem apontador e pausa nas provas.
+A mochila mantém as abas de Livros, Materiais, Conquistas e Revisão; ela não é mais uma etapa obrigatória para comprar colecionáveis. Os colecionáveis são compras únicas; seus bônus são somados depois dos multiplicadores existentes. Compras repetidas e compras sem saldo são bloqueadas. A produção dos itens funciona mesmo sem apontador e pausa nas provas.
 
 | Colecionável | Custo em QI | QI/clique adicional | QI/s adicional |
 | --- | ---: | ---: | ---: |

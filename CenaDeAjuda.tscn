@@ -121,7 +121,7 @@ theme_override_fonts/bold_font = ExtResource("1_isckh")
 theme_override_font_sizes/normal_font_size = 15
 theme_override_font_sizes/bold_font_size = 18
 bbcode_enabled = true
-text = "[b]1. ESTUDE[/b] — Clique no caderno para ganhar QI.\n\n[b]2. MELHORE[/b] — Use a loja para aumentar o clique e produzir QI automaticamente.\n\n[b]3. FAÇA AS PROVAS[/b] — Pague o custo do seminário, responda 5 perguntas e cuide das suas 3 vidas.\n\n[b]4. AVANCE[/b] — Passe na Prova 1 para liberar a Prova 2. Seu QI, upgrades, volume e provas concluídas são salvos automaticamente."
+text = "[b]1. ESTUDE[/b] — Clique no caderno para ganhar QI.\n\n[b]2. COMPRE[/b] — Abra o estojo: melhorias, livros, materiais, colas e provas ficam nas abas da loja.\n\n[b]3. USE COLAS[/b] — 100 QI por uso; estoque de até 5. Na prova, elimine uma alternativa errada, uma vez por pergunta.\n\n[b]4. AVANCE[/b] — Acerte 5 perguntas com 3 vidas e dentro do tempo. A Prova 1 libera a Prova 2. Progresso e colas são salvos automaticamente."
 fit_content = true
 scroll_active = false
 

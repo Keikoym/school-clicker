@@ -1,5 +1,7 @@
 # Pendências
 
+- Avaliar em partidas completas o preço de 100 QI por cola e o limite de cinco no estoque, mantendo um uso por pergunta.
+
 - Avaliar o rework de preços em sessões longas, especialmente o tempo até as provas de 400/1.600 QI e o retorno dos multiplicadores.
 - Manter o histórico remoto em `Keikoym/school-clicker` atualizado nas próximas entregas; a publicação inicial e as duas tags de versões foram concluídas.
 - Exportar e validar um executável novo: o arquivo `sholl clicker.exe` existente está vazio.

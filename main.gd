@@ -21,6 +21,10 @@ var estado_restaurar_debug: Dictionary = {}
 var ferramentas: CanvasLayer
 
 var qi: int = 0
+var colas: int = 0
+const CUSTO_COLA := 100
+const LIMITE_COLAS := 5
+var catalogo_loja: Control
 var valor_do_clique_base: int = 1
 
 # Variaveis: Controle do Multiplicador
@@ -117,6 +121,9 @@ func _ready() -> void:
 	move_child(itens_mesa, botao_clique.get_index())
 	colecao = preload("res://colecao.gd").new()
 	add_child(colecao)
+	catalogo_loja = preload("res://loja_catalogo.gd").new()
+	catalogo_loja.main = self
+	janela_loja.add_child(catalogo_loja)
 	if estado_restaurar_debug.is_empty():
 		carregar_progresso()
 	else:
@@ -168,6 +175,8 @@ func atualizar_interface() -> void:
 	_aplicar_visibilidade_objetos()
 	_atualizar_disponibilidade_loja()
 	preload("res://apresentacao.gd").atualizar(self)
+	if is_instance_valid(catalogo_loja):
+		catalogo_loja.atualizar()
 	if colecao:
 		colecao.atualizar()
 		if itens_mesa:
@@ -175,6 +184,28 @@ func atualizar_interface() -> void:
 
 func obter_ganho_clique() -> int:
 	return int(round(valor_do_clique_base * multiplicador_clique)) + (int(colecao.bonus_clique) if colecao else 0)
+
+func comprar_cola() -> void:
+	if modo_prova_ativo or qi < CUSTO_COLA or colas >= LIMITE_COLAS:
+		return
+	qi -= CUSTO_COLA
+	colas += 1
+	atualizar_interface()
+	mostrar_mensagem_loja("Cola comprada: elimina uma alternativa errada.", true)
+	salvar_progresso()
+
+func consumir_cola(quiz: Node) -> bool:
+	if colas <= 0 or not modo_prova_ativo or not is_instance_valid(quiz):
+		return false
+	var prova = quiz.get_parent()
+	if prova != get_node_or_null("Prova1") and prova != get_node_or_null("Prova2"):
+		return false
+	if prova.encerrando or prova.timer_geral_prova.is_stopped() or prova.minigame_instanciado_atual != quiz or quiz.jogo_finalizado:
+		return false
+	colas -= 1
+	salvar_progresso()
+	atualizar_interface()
+	return true
 
 func obter_producao_passiva() -> int:
 	return int(round(qi_por_segundo_base + qi_por_segundo_base * multiplicador_passivo_bonus)) + (int(colecao.bonus_passivo) if colecao else 0)
@@ -396,7 +427,7 @@ func _on_botao_loja_pressed() -> void:
 		janela_loja.visible = true
 		
 		if mensagem_loja:
-			mensagem_loja.text = "Passe o mouse para detalhes. Esc: fechar."
+			mensagem_loja.text = "Escolha uma categoria. Benefícios e preços nos cartões. Esc: fechar."
 			mensagem_loja.modulate = Color.WHITE
 		var nova_posicao_final = posicao_centro_loja
 		tween_loja = create_tween()
@@ -564,6 +595,7 @@ func _criar_dados_salvamento() -> Dictionary:
 		"versao": VERSAO_SAVE,
 		"colecao": colecao.salvar() if colecao else {},
 		"qi": qi,
+		"colas": colas,
 		"clique": {
 			"valor_base": valor_do_clique_base,
 			"multiplicador": multiplicador_clique,
@@ -623,6 +655,7 @@ func _criar_dados_salvamento() -> Dictionary:
 
 func _aplicar_dados_salvamento(dados: Dictionary) -> void:
 	qi = max(0, int(dados.get("qi", qi)))
+	colas = clampi(int(dados.get("colas", 0)), 0, LIMITE_COLAS)
 	if colecao:
 		colecao.carregar(_obter_dicionario(dados, "colecao"))
 

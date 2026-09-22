@@ -33,9 +33,12 @@ func _run() -> void:
 	main.timer_autoclick.stop()
 	main.qi = 2000
 	main.colecao.comprar_item("casmurro")
+	main.colas = 3
 	main.salvar_progresso()
 	main.qi = 0
+	main.colas = 0
 	main.carregar_progresso()
+	verificar(main.colas == 3, "Estoque de colas persiste em disco")
 	verificar(main.qi == 1860 and main.colecao.adquiridos.has("casmurro"), "Funções reais de save/load restauram QI e livro")
 	main.qi = 777
 	main.salvar_progresso()
@@ -60,6 +63,10 @@ func _run() -> void:
 	main.iniciar_modo_prova()
 	await create_timer(0.5).timeout
 	var prova = main.find_child("Prova1", true, false)
+	main.colas = 2
+	prova.minigame_instanciado_atual.ajuda_cola.usar()
+	var gravado: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(ARQUIVO))
+	verificar(gravado.get("colas", -1) == 1, "Uso da cola grava estoque imediatamente em disco")
 	prova.vidas = 2
 	main.iniciar_modo_prova()
 	verificar(prova.vidas == 2, "Iniciar prova ativa novamente não reinicia vidas")

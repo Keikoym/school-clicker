@@ -153,13 +153,13 @@ func _montar_interface() -> void:
 
 func _process(delta: float) -> void:
 	# Durante provas, preserve a leitura de vidas, respostas e cronômetro.
-	aviso.visible = exibindo_aviso and not main.modo_prova_ativo and not painel.visible
+	aviso.visible = exibindo_aviso and not main.modo_prova_ativo and not painel.visible and not main.camada_loja.visible
 	if aviso.visible:
 		tempo_aviso -= delta
 		if tempo_aviso <= 0.0:
 			exibindo_aviso = false
 			aviso.hide()
-	if not exibindo_aviso and not mensagens.is_empty() and not main.modo_prova_ativo and not painel.visible:
+	if not exibindo_aviso and not mensagens.is_empty() and not main.modo_prova_ativo and not painel.visible and not main.camada_loja.visible:
 		_mostrar_aviso()
 
 func abrir() -> void:
@@ -270,7 +270,7 @@ func atualizar() -> void:
 			if not main.carregando_salvamento:
 				mensagens.append("Conquista desbloqueada: " + medalha[1])
 				main.solicitar_salvamento()
-	if not exibindo_aviso and not mensagens.is_empty() and not main.modo_prova_ativo and not painel.visible:
+	if not exibindo_aviso and not mensagens.is_empty() and not main.modo_prova_ativo and not painel.visible and not main.camada_loja.visible:
 		_mostrar_aviso()
 	if not painel.visible:
 		return

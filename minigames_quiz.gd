@@ -41,6 +41,7 @@ var perguntas_disponiveis: Array[Dictionary] = []
 var pergunta_atual: Dictionary
 var texto_resposta_correta: String
 var jogo_finalizado: bool = false
+var ajuda_cola: Button
 var perguntas_respondidas_nesta_prova: int = 0
 
 @onready var label_pergunta: Label = find_child("TextoPergunta", true, false)
@@ -52,6 +53,8 @@ var perguntas_respondidas_nesta_prova: int = 0
 @onready var barra_visual: ProgressBar = find_child("BarraVisual", true, false)
 
 func _ready() -> void:
+	ajuda_cola = preload("res://cola_quiz.gd").new()
+	add_child(ajuda_cola)
 	randomize()
 	perguntas_disponiveis = banco_perguntas.duplicate()
 	perguntas_respondidas_nesta_prova = 0
@@ -75,6 +78,8 @@ func _on_botao2_pressed() -> void: _on_opcao_escolhida(botao2)
 func _on_botao3_pressed() -> void: _on_opcao_escolhida(botao3)
 
 func puxar_nova_pergunta() -> void:
+	if ajuda_cola:
+		ajuda_cola.usada = false
 	_resetar_feedback_visual()
 	# Atualiza o texto visual do contador na tela (ex: "0 / 5", "1 / 5")
 	if label_contador:
@@ -118,7 +123,7 @@ func puxar_nova_pergunta() -> void:
 		barra_visual.parado = false
 
 func _on_opcao_escolhida(botao_clicado: Button) -> void:
-	if jogo_finalizado: return
+	if jogo_finalizado or botao_clicado.disabled: return
 	jogo_finalizado = true
 	
 	botao1.disabled = true

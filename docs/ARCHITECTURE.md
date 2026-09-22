@@ -4,6 +4,16 @@ O projeto usa Godot e GDScript. `principalgame.tscn` contém o gameplay e `main.
 
 ## Rework de preços e apresentação — 21/09/2026
 
+### Loja unificada e consumíveis — atualização posterior
+
+`loja_catalogo.gd` cria cinco abas e cartões com containers/rolagem dentro de `JanelaLoja`. Os controles antigos permanecem sob `LogicaCompras`, um pai oculto, preservando nomes, sinais, scripts de compra e restauração dos upgrades. A interface nova consulta essas regras e dispara os botões originais; os colecionáveis usam `colecao.comprar_item()`. Antes de iniciar uma prova, a fachada verifica conclusão, pré-requisito e saldo. `BotaoFecharLoja` e `MensagemLoja` continuam visíveis. `apresentacao.gd` mantém o tema e HUD; sua antiga decoração da loja fica oculta. Avisos de conquistas também aguardam o fechamento da loja.
+
+`main.gd::colas`, `CUSTO_COLA=100` e `LIMITE_COLAS=5` controlam o estoque. `comprar_cola()` valida saldo/limite/estado e `consumir_cola(quiz)` valida a instância ativa, tempo e estado da prova. Compra e consumo chamam o salvamento existente imediatamente, respeitando bloqueios de debug e save inválido. O campo opcional `colas` mantém o formato versão 1 compatível e é limitado a 0–5 no carregamento. Saves anteriores recebem zero.
+
+`cola_quiz.gd` é um botão compartilhado, instanciado pelos dois quizzes. `usada` impede mais de uma eliminação por pergunta e reinicia em `puxar_nova_pergunta()`. Só alternativas erradas e habilitadas entram no sorteio. A eliminada continua visível como um botão desabilitado; o callback de respostas também recusa botões desabilitados. Nada altera vidas, acertos ou cronômetro. O botão fica indisponível fora de uma pergunta ativa.
+
+`tests/test_loja_colas.gd` valida a loja direta, limites de compra, compatibilidade/restauração do estoque e uso nas duas provas, sem acessar o save do jogador. Também gera capturas quando executado graficamente.
+
 - `economia.gd::preco(tipo, nivel)` calcula preço inicial × crescimento elevado ao nível, arredondado para múltiplos de 5, limitado a 1 trilhão. `nivel_multiplicador()` e `nivel_passivo()` recuperam o nível dos valores persistidos.
 - `main.gd::_aplicar_estado_upgrades()` ignora o custo legado salvo e deriva o preço dos níveis restaurados. Carregamentos repetidos não acumulam aumentos. O formato do save permanece na versão 1; QI, aquisições e conquistas não são apagados.
 - `apresentacao.gd::configurar()` aplica estilos nativos à loja, cria `SaldoLoja` e `ResumoEstudo` e substitui visualmente `BotaoSair` por um botão textual ligado ao mesmo salvamento/saída. `atualizar()` reflete QI e produção; `numero()` abrevia valores grandes no HUD. A interface continua no canvas lógico existente, sem novo sistema responsivo.

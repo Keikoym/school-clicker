@@ -1,5 +1,8 @@
 # Histórico de versões
 
+- `antes-loja-unificada-colas-2026-09-21`: estado anterior à loja em abas e às colas.
+- `loja-unificada-colas-2026-09-21`: compras diretas em cinco categorias, novos cartões e colas persistentes nas duas provas.
+
 Este repositório local foi iniciado em 21/09/2026. Não existe aqui histórico Git comprovado anterior a essa data.
 
 - `snapshot-pre-rework-2026-09-21`: código e assets presentes antes do rework de preços, loja e conquistas (commit `e428a4e`).
@@ -12,4 +15,4 @@ O ZIP original permanece intacto. O executável vazio não é uma versão utiliz
 
 Para consultar uma versão, abra a tag correspondente no histórico Git. Para testar uma versão antiga, prefira uma cópia separada do projeto e preserve o save atual; restaurar código não restaura automaticamente o progresso do jogador.
 
-Histórico publicado no repositório privado [Keikoym/school-clicker](https://github.com/Keikoym/school-clicker), incluindo a branch `main` e as duas tags acima. As tags permitem consultar e baixar cada snapshot sem apagar o estado atual.
+Histórico mantido no repositório privado [Keikoym/school-clicker](https://github.com/Keikoym/school-clicker), incluindo a branch `main` e tags de versões. As tags permitem consultar e baixar cada snapshot sem apagar o estado atual.

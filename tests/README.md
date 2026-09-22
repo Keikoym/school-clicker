@@ -1,5 +1,11 @@
 # Teste de gameplay
 
+## Loja unificada e colas
+
+`--script tests/test_loja_colas.gd` verifica compras nas abas, bloqueio da segunda prova, estoque de colas, save legado/restauração e eliminação correta nas duas provas, incluindo cliques repetidos, feedback, estoque vazio e tempo esgotado. Usa `main_isolado.gd`, sem tocar no save pessoal. Sem `--headless`, produz `loja_nova_*.png` para inspeção visual.
+
+Validação desta atualização: 31 verificações novas passaram com renderização OpenGL e cliques de mouse nas abas, compra e cola. As suítes anteriores passaram: gameplay 23, coleção 25, revisão 13 (incluindo duas novas verificações de colas em disco), mesa 13, debug 14 e rework 12. Total: 131 verificações comportamentais. Auditoria: 28 scripts carregados. O erro de JSON no cenário de save corrompido é esperado; o save pessoal não foi usado. Capturas das categorias e das duas provas foram conferidas.
+
 ## Sprites dos itens
 
 Dez artes em `assets/itens/` foram integradas à mesa, loja e biblioteca. `--script tests/test_sprites.gd` validou os dez PNGs com transparência e gerou `sprites_catalogo.png`. O carregamento direto de PNG nesse teste é intencional para inspecionar os arquivos fonte; o jogo usa recursos importados.
